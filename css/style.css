@@ -1,6 +1,4 @@
 
-/* Erythraean Sea — antique minimalist aesthetic */
-
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +28,6 @@ main {
     text-align: left;
 }
 
-/* Main title */
 h1 {
     color: #D9C6A0;
     font-family: "Bodoni MT", "Didot", "Times New Roman", serif;
@@ -54,7 +51,6 @@ main p {
     text-shadow: 1px 2px 4px #D9C6A0;
 }
 
-/* Footer */
 footer {
     position: absolute;
     bottom: 20px;
@@ -71,7 +67,6 @@ footer p {
     text-shadow: 1px 1px 3px #D9C6A0;
 }
 
-/* Decorative lines */
 body::before,
 body::after {
     content: "";
@@ -95,8 +90,6 @@ body::after {
     top: 22%;
 }
 
-
-/* Small screens */
 @media (max-width: 500px) {
     body::before {
         left: 5%;
@@ -107,8 +100,6 @@ body::after {
         width: 25%;
     }
 }
-
-/* Infinite-looking decorative rectangles */
 
 body::before {
     width: 5px;
@@ -133,3 +124,36 @@ main::before {
     top: 75%;
     transform: rotate(12deg);
 }
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 8px;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: #C9AD91;
+}
+
+.socials a {
+    color: #AA987B;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.socials a:hover {
+    color: #D9C6A0;
+    text-decoration: underline;
+}
+
+.socials a:not(:last-child)::after {
+    content: " ·";
+    color: #C9AD91;
+    margin-left: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
