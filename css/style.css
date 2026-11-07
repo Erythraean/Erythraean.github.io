@@ -1,0 +1,135 @@
+
+/* Erythraean Sea — antique minimalist aesthetic */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #F6ECDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-family: Georgia, serif;
+   text-align: left; 
+    position: relative;
+    overflow: hidden;
+}
+
+
+main {
+    width: 100%;
+    max-width: 750px;
+    position: relative;
+    transform: translate(3px, -3px);
+    z-index: 2;
+    text-align: left;
+}
+
+/* Main title */
+h1 {
+    color: #D9C6A0;
+    font-family: "Bodoni MT", "Didot", "Times New Roman", serif;
+    font-size: clamp(48px, 9vw, 100px);
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+
+    text-shadow: 2px 3px 5px #C8B28F;
+}
+
+main p {
+    color: #AA987B;
+    font-family: Georgia, serif;
+    font-size: clamp(13px, 2vw, 17px);
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 0;
+    text-shadow: 1px 2px 4px #D9C6A0;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    z-index: 2;
+}
+
+footer p {
+    font-size: 12px;
+    color: #AA987B;
+    margin-top: 4px;
+    text-shadow: 1px 1px 3px #D9C6A0;
+}
+
+/* Decorative lines */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    background: #D5BFA1;
+    opacity: 0.65;
+    z-index: 1;
+}
+
+body::before {
+    width: 1px;
+    height: 65%;
+    left: 12%;
+    top: 17%;
+}
+
+body::after {
+    width: 35%;
+    height: 1px;
+    right: 8%;
+    top: 22%;
+}
+
+
+/* Small screens */
+@media (max-width: 500px) {
+    body::before {
+        left: 5%;
+    }
+
+    body::after {
+        right: 5%;
+        width: 25%;
+    }
+}
+
+/* Infinite-looking decorative rectangles */
+
+body::before {
+    width: 5px;
+    height: 200vh;
+    left: 12%;
+    top: -50%;
+    transform: rotate(8deg);
+}
+
+body::after {
+    width: 200vw;
+    height: 5px;
+    left: -50%;
+    top: 22%;
+    transform: rotate(-7deg);
+}
+
+main::before {
+    width: 200vw;
+    height: 5px;
+    left: -50%;
+    top: 75%;
+    transform: rotate(12deg);
+}
